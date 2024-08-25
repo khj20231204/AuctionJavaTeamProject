@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+
+.loginHeader{		/*  로그인 폼 배경*/
+	background : silver;
+	width:450px;
+	outline:orange; 	
+	padding:10px;
+	border:5px;
+	position: relative; 
+	left: 38%;  /*  나중에 고치기*/
+     
+	
+}
+.loginHeaderModal{		/*  로그인 폼의 모달창 배경*/
+	background : silver;	
+}
+.loginFont{        /* 로그인 폼의 글씨 설정 */ 
+	
+	color:white;
+	font-size : 16px;
+}
+.loginFontHead{        /* 로그인 폼의 머릿글 글씨 설정 */ 
+	
+	color:white;
+	font-size : 32px;
+}
+</style>

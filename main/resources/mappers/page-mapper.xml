@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kh.team.page">
+
+	<!-- 더보기 버튼 -->
+	<select id="morePage" resultType="ProductVo">
+		select * from (
+		select rownum rnum , p_no , p_name , cate_no , p_price , p_content ,
+		p_seller , p_thumbimg , p_regdate, p_readcount from (
+
+		select a.*
+		from clothes_product a
+
+		union
+
+		select b.c_com_no , b.c_com_name , b.c_com_cate_no , b.c_com_price ,
+		b.c_com_content , b.c_com_seller , b.c_com_pic , b.c_com_regdate ,
+		b.p_no, b.p_readcount
+		from computer_product b
+
+		union all
+
+		select c1.*
+		from furniture_bed c1
+
+		union all
+
+		select c2.*
+		from furniture_interior c2
+
+		union all
+
+		select c3.*
+		from furniture_kitchen c3
+
+		union all
+
+		select c4.*
+		from furniture_life c4
+
+		union all
+
+		select d.* from whitegoods d
+
+		)) where rnum between #{startNum} and #{startNum} + 6
+	</select>
+
+	<!-- 검색 -->
+	<select id="search" resultType="ProductVo">
+		select p_no , p_name , cate_no , p_price , p_content , p_seller , p_thumbimg , p_regdate , p_no2, p_readcount
+		
+		from (
+
+		select a.*
+		from clothes_product a
+
+		union all
+
+		select b.c_com_no ,
+		b.c_com_name , b.c_com_cate_no , b.c_com_price , b.c_com_content , b.c_com_seller , b.c_com_pic , b.c_com_regdate , b.p_no, b.p_readcount
+		from computer_product b
+
+		union all
+
+		select c1.*
+		from furniture_bed c1
+
+		union all
+
+		select c2.*
+		from furniture_interior c2
+
+		union all
+
+		select c3.*
+		from
+		furniture_kitchen c3
+
+		union all
+
+		select c4.*
+		from furniture_life c4
+
+		union all
+
+		select d.*
+		from whitegoods d
+		) where p_name like '%' || #{searchName} || '%' 
+
+	</select>
+	
+	<!-- 원하는 갯수 만큼  전체 상품목록 받아오기 -->
+	<select id="selectAll_List" resultType="ProductVo">
+		select * from (
+		select rownum rnum , p_no , p_name , cate_no , p_price , p_content ,
+		p_seller , p_thumbimg , p_regdate, p_readcount from (
+
+		select a.*
+		from clothes_product a
+
+		union
+
+		select b.c_com_no , b.c_com_name , b.c_com_cate_no , b.c_com_price ,
+		b.c_com_content , b.c_com_seller , b.c_com_pic , b.c_com_regdate ,
+		b.p_no, b.p_readcount
+		from computer_product b
+
+		union all
+
+		select c1.*
+		from furniture_bed c1
+
+		union all
+
+		select c2.*
+		from furniture_interior c2
+
+		union all
+
+		select c3.*
+		from furniture_kitchen c3
+
+		union all
+
+		select c4.*
+		from furniture_life c4
+
+		union all
+
+		select d.* from whitegoods d
+
+		)) where rnum between 1 and 7
+	</select>
+	
+	<!-- 조회수 증가 -->
+	<update id="updateReadCount">
+		update product set 
+		p_readcount = p_readcount + 1
+		where p_no = #{p_no}
+	</update>
+	
+	<select id="content" resultType="ProductVo">
+		select * from product
+		 where p_no = #{p_no}
+	</select>
+	
+	<select id="best_item" resultType="ProductVo">
+		select * from (
+						select rownum rnum, p.* from product p )
+			where rnum between 1 and 12
+		order by p_readcount desc
+
+	</select>
+	
+</mapper>

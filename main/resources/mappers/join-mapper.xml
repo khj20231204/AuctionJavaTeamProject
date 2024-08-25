@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.kh.team.join">
+	
+	<insert id="joinMember">
+		insert into member(m_id,m_pass,email,m_name,m_phonenumber) 
+		values(#{m_id}, #{m_pass}, #{email}, #{m_name}, #{m_phonenumber})
+	</insert>
+
+	<select id="joinEmailConfirmSelected" resultType="JoinEmailVo">
+		select * from JOIN_EMAIL_CONFIRM where email=#{email} and checkid=#{checkid}
+	</select>
+	
+	<insert id="joinEmailConfirmInsert">
+		insert into JOIN_EMAIL_CONFIRM(EMAIL,CHECKID) values(#{email},#{checkid})
+	</insert>
+	
+	<update id="joinEmailStatusUpdate">
+		update JOIN_EMAIL_CONFIRM set status=1 where email=#{email}
+	</update>
+	
+</mapper>

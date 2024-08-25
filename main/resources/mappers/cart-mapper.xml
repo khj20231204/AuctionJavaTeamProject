@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.kh.team.cart">
+	<select id="cartList" resultType="CartVo">
+		select * from cart
+		where m_id = #{m_id}
+		order by cart_no desc
+	</select>
+	
+	<select id="productList" resultType="ProductVo">
+		select p_no  , p_name , cate_no , p_price , p_content , p_seller , p_thumbimg , p_regdate , p_no2, p_readcount from (
+																								select a.*
+																								from clothes_product a
+																							
+																								union all 
+																							
+																								select b.c_com_no  , b.c_com_name , b.c_com_cate_no , b.c_com_price , b.c_com_content , b.c_com_seller , b.c_com_pic , b.c_com_regdate , b.p_no, b.p_readcount
+																								from computer_product b 
+																							
+																								union all 
+																							
+																								select c1.* 
+																								from furniture_bed c1
+																							
+																								union all
+																								
+																								select c2.* 
+																								from furniture_interior c2
+																								
+																								union all
+																								
+																								select c3.*
+																								from furniture_kitchen c3
+																								
+																								union all
+																								
+																								select c4.*
+																								from furniture_life c4
+																								
+																								union all
+																								
+																								select d.*
+																								from whitegoods d
+	)
+	</select>
+	
+	<insert id="cart_input">
+		insert into cart (cart_no, p_no, m_id)
+		values (seq_cart_no.nextval, #{p_no}, #{m_id})
+	</insert>
+	
+	<delete id="cate_output">
+		delete from cart
+		where cart_no = #{cart_no}
+	</delete>
+	
+	<select id="searchCart" resultType="CartVo">
+		select * from cart
+		where p_no = #{p_no}
+		and m_id = #{m_id}
+	</select>
+	
+	<select id="getP_no" resultType="_int">
+		select p_no from cart
+		where cart_no = #{cart_no}
+	</select>
+	
+	<select id="getProduct" resultType="ProductVo">
+		select * from product
+		where p_no2 = #{p_no2}
+	</select>
+</mapper>

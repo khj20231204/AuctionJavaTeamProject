@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+.DetailDiv{			/*  컴퓨터 결제폼 배경*/
+	display:inline-block;
+	width:100%;	
+}
+
+.DetailNav{			/*  컴퓨터 구매폼 (왼쪽) 배경*/
+	display:inline-block;	
+	width:20%;		
+	float:left;
+}
+
+.DetailSection{			/*  컴퓨터 구매폼 (중앙) 배경*/
+	display:inline-block;	
+	width:60%;		
+	float:left;
+}
+
+.DetailAside{			/*  컴퓨터 구매폼 (오른쪽) 배경*/
+	display:inline-block;	
+	width:20%;		
+	float:left;
+}
+</style>

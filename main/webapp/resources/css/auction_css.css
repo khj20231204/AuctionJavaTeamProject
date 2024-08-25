@@ -1,0 +1,125 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<style type="text/css">
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+
+.loadingBox:nth-child(2n-1){
+  /*background-color: rgba(0,0,0,0.05);*/
+}
+
+.loadingBox{
+	position: absolute;
+ 	text-align: center; 
+	/* screenDiv의 width:300px, heigth:150px
+	loadingBar의 width:150px, height:20px
+	absolute는 부모의 크기를 기준으로 절대값을 설정 */
+ 	top: 65px; /* (150/2)-(20/2) */
+ 	left:75px; /* (300/2)-(150/2) */
+}
+
+
+
+/* MEDIA QUERIES */
+/*
+@media (max-width: 700px){
+  .loadingBox{
+    width: 50%;
+  }
+  .loadingBox:nth-child(2n-1){
+    background-color: inherit;
+  }
+  .loadingBox:nth-child(4n),.loadingBox:nth-child(4n-3) {
+    background-color: rgba(0,0,0,0.05);
+  }
+}
+
+@media (max-width: 420px){
+  .loadingBox{
+    width: 100%;
+  }
+  .loadingBox:nth-child(4n),.loadingBox:nth-child(4n-3){
+    background-color: inherit;
+  }
+  .loadingBox:nth-child(2n-1){
+    background-color:rgba(0,0,0,0.05);
+  }
+}
+*/
+.loadingBar{/*바와 글자의 총 길이과 높이*/
+  position: relative;
+  width: 150px;
+  height: 20px;
+
+/*   top: 45%; */
+/*   top: -webkit-calc(50% - 10px); */
+/*   top: calc(50% - 10px); */
+/*   left: 25%; */
+/*   left: -webkit-calc(50% - 75px); */
+/*   left: calc(50% - 75px); */
+}
+
+.loadingBar:after{ /* 검은색 위에 횐색 */
+  content: "processing biding...";
+  color: black;
+  font-family:  Lato,"Helvetica Neue" ;
+  font-weight: 200;
+  font-size: 16px;
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  left: 0;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.loadingBar:before{ /* 밑에 움직이는 검은색 */
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: -5px;
+  left: 0px;
+  height: 30px;
+  width: 0px; /* 가로0에서 부터 시작 한다 */
+  z-index: 0;
+  opacity: 1;
+  -webkit-transform-origin:  100% 0%;
+      transform-origin:  100% 0% ;
+  -webkit-animation: loadingBar 2s ease-in-out infinite;
+      animation: loadingBar 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes loadingBar{
+    0%{width: 0px;}
+    70%{width: 100%; opacity: 1;}
+    90%{opacity: 0; width: 100%;}
+    100%{opacity: 0;width: 0px;}
+}
+
+@keyframes loadingBar{
+    0%{width: 0px;}
+    70%{width: 100%; opacity: 1;}
+    90%{opacity: 0; width: 80%;}
+    100%{opacity: 0;width: 0px;}
+}
+
+div.screenBlock {
+		display:none;
+		background-color:black; 
+		position:absolute;
+		left:0px;
+		top:0px;
+	}
+	
+div#screenDiv{
+	background-color:white;
+	display: none;
+	position: absolute;
+	width:300px;
+	height:150px;
+}
+
+</style>

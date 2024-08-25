@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.kh.team.sanc">
+
+	<select id="searchSanc" resultType="SanctionVo">
+		select * from sanctions
+		where m_id = #{m_id}
+	</select>
+	
+	<insert id="newSanction">
+		insert into sanctions(m_id)
+		values (#{m_id})
+	</insert>
+	
+	<update id="sancUpdate">
+		update sanctions set
+			sanc_count = sanc_count + 1
+		where m_id = #{m_id}
+	</update>
+	
+	<select id="SanctionList" resultType="SanctionVo">
+		select * from sanctions
+	</select>
+</mapper>

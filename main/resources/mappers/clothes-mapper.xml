@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.kh.team.clothes">
+	<select id="getClothesList" resultType="ProductVo">
+		select * from clothes_product
+		where cate_no like ''|| #{cate_no} || '%'
+		order by p_no desc
+	</select>
+	
+	<insert id="insertClothes">
+		insert into clothes_product(p_no, p_name, cate_no, p_price, p_content, p_seller, p_thumbimg, p_no2)
+		values (seq_product_no.nextval, #{p_name}, #{cate_no}, #{p_price}, #{p_content}, #{p_seller}, #{p_thumbimg}, seq_product_no.nextval)
+	</insert>
+	
+	<update id="updateClothes">
+		update clothes_product set
+			p_name = #{p_name},
+			cate_no = #{cate_no},
+			p_price = #{p_price},
+			p_content = #{p_content},
+			p_thumbimg = #{p_thumbimg}
+		where p_no = #{p_no}
+		and p_seller = #{p_seller}
+	</update>
+	
+	<delete id="deleteClothes">
+		delete from clothes
+		where p_no = #{p_no}
+		and p_seller = #{p_seller}
+	</delete>
+	
+	<select id="maleClothes_List" resultType="ProductVo">
+		select * from clothes_product
+		where cate_no like 101 || '%'
+		
+	</select>
+
+	
+</mapper>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		id="dataSource">
+		<property name="driverClassName"
+			value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"/>
+		<property name="url" value="jdbc:log4jdbc:oracle:thin:@database-2.cmyixsil1awh.ap-northeast-2.rds.amazonaws.com:1521:orcl"/>
+		<property name="username" value="admin"/>
+		<property name="password" value="1q2w3e4r"/>
+	</bean>
+	
+	<bean class="org.mybatis.spring.SqlSessionFactoryBean"
+		id="sqlSessionFactory">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="configLocation"
+			value="classpath:mybatis-config.xml"/>
+		<property name="mapperLocations"
+			value="classpath:mappers/*-mapper.xml"/>
+	</bean>	
+	
+	<!-- try ~ catch -->
+	<bean class="org.mybatis.spring.SqlSessionTemplate"
+		destroy-method="clearCache">
+		<constructor-arg name="sqlSessionFactory"
+			ref="sqlSessionFactory" />
+	</bean>
+
+	<!-- @Transactional 사용 가능 -->
+	<tx:annotation-driven />
+
+	<!-- commit, rollback, setAutoCommit -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 구글 메일 -->
+	<bean id="mailSender"
+		class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="username" value="jjh9000507jjh@gmail.com" />
+		<property name="password" value="nbrkkjdchxwfvchf" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+			</props>
+
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+</beans>

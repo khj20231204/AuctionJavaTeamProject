@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.kh.team.admin">
+	<select id="allProductList" resultType="ProductVo">
+		select p_no  , p_name , cate_no , p_price , p_content , p_seller , p_thumbimg , p_regdate , p_no2, p_readcount from (
+																								select a.*
+																								from clothes_product a
+																							
+																								union all 
+																							
+																								select b.c_com_no  , b.c_com_name , b.c_com_cate_no , b.c_com_price , b.c_com_content , b.c_com_seller , b.c_com_pic , b.c_com_regdate , b.p_no, b.p_readcount
+																								from computer_product b 
+																							
+																								union all 
+																							
+																								select c1.* 
+																								from furniture_bed c1
+																							
+																								union all
+																								
+																								select c2.* 
+																								from furniture_interior c2
+																								
+																								union all
+																								
+																								select c3.*
+																								from furniture_kitchen c3
+																								
+																								union all
+																								
+																								select c4.*
+																								from furniture_life c4
+																								
+																								union all
+																								
+																								select d.*
+																								from whitegoods d
+	)
+	order by p_no2 desc
+	</select>
+	
+	<!-- 판매자 등록 취소 -->
+	<update id="rollbackSeller">
+		update member set
+    		m_selling = 0,
+    		m_selling_regdate = null
+		where m_id = #{m_id}
+	</update>
+	
+	<!-- 여기부터 관리자가 상품 등록된 것 삭제하는 것 -->
+	<delete id="adminDeleteFBed">
+		delete from furniture_bed
+		where bed_no = #{bed_no}
+	</delete>
+
+	<delete id="adminDeleteFInterior">
+		delete from furniture_interior
+		where interior_no = #{interior_no}
+	</delete>
+
+	<delete id="adminDeleteFKitchen">
+		delete from furniture_kitchen
+		where kitchen_no = #{kitchen_no}
+	</delete>
+
+	<delete id="adminDeleteFLife">
+		delete from furniture_life
+		where life_no =  #{life_no}
+	</delete>
+	
+	<delete id="adminDeleteClothes">
+		delete from clothes_product
+		where p_no =  #{p_no}
+	</delete>
+	
+	<delete id="adminDeleteComputer">
+		delete from computer_product
+		where c_com_no =  #{c_com_no}
+	</delete>
+	
+	<delete id="adminDeleteWhitegoods">
+		delete from whitegoods
+		where w_no = #{w_no}
+	</delete>
+	
+	<delete id="adminDeleteProduct">
+		delete from product
+		where p_no2 = #{p_no2}
+	</delete>
+	<!-- 여기까지가 삭제 -->
+	
+	<!-- 관리자 게시글 삭제 시 computer 쪽 퍼센트 테이블 값 삭제 -->
+	<delete id="adminComPercentDelete">
+		delete from c_product_purchase_percentage
+		where c_com_no_ref = #{c_com_no_ref}
+	</delete>
+
+	<!-- 퍼센트 테이블 값 삭제하기위한 computer 테이블 가져오기 -->
+	<select id="computerNoGet" resultType="ComputerVo">
+		select * from computer_product
+		where p_no = #{p_no}
+	</select>
+	<!-- 여기부터 카테고리 추가 -->
+	<insert id="adminCategoryInput">
+		insert into category(cate_no, cate_name, cate_ref)
+		values (#{cate_no}, #{cate_name}, #{cate_ref})
+	</insert>
+	<!-- 여기까지 카테고리 추가 -->
+	
+	<!-- 여기부터 카테고리 삭제 -->
+	<delete id="adminCategoryDelete">
+		delete from category
+		where cate_no like '' || #{cate_no} || '%'
+	</delete>
+	<!-- 여기까지 카테고리 삭제 -->
+	
+	<!-- 카테고리 삭제에 필요한 카테고리 목록 가져오기 -->
+	<select id="getCategoryList" resultType="CategoryVo">
+		select * from category
+		order by cate_no
+	</select>
+	
+	<!-- 카테고리 삭제에 필요한 카테고리 선택시 목록 가져오기 -->
+	<select id="CategoryDeleteList" resultType="CategoryVo">
+		select * from category
+		where cate_no like '' || #{cate_no} || '%'
+		order by cate_no
+	</select>
+	
+	<!-- 카테고리 삭제시 해당 카테고리에 존재하는 상품 삭제 -->
+	<delete id="adminCateDeleteProduct">
+		delete from product
+		where cate_no like '' || #{cate_no} || '%'
+	</delete>
+	
+	<!-- 카테고리 삭제시 해당 카테고리에 존재하는 가전제품 삭제 -->
+	<delete id="adminCateDeleteWhitegoods">
+		delete from whitegoods
+		where cate_no like '' || #{cate_no} || '%'
+	</delete>
+	
+	<!-- 카테고리 삭제시 해당 카테고리에 존재하는 의류 삭제 -->
+	<delete id="adminCateDeleteClothes">
+		delete from clothes_product
+		where cate_no like '' || #{cate_no} || '%'
+	</delete>
+	
+	<!-- 카테고리 삭제시 해당 카테고리에 존재하는 컴퓨터 삭제 -->
+	<delete id="adminCateDeleteComputer">
+		delete from computer_product
+		where c_com_cate_no like '' || #{c_com_cate_no} || '%'
+	</delete>
+	
+	<!-- 카테고리 삭제시 해당 카테고리에 존재하는 가구류(4개) 삭제 -->
+	<delete id="adminCateDeleteFBed">
+		delete from furniture_bed
+		where cate_no like '' || #{cate_no} || '%'
+	</delete>
+	
+	<delete id="adminCateDeleteFInterior">
+		delete from furniture_interior
+		where cate_no like '' || #{cate_no} || '%'
+	</delete>
+	
+	<delete id="adminCateDeleteFKitchen">
+		delete from furniture_kitchen
+		where cate_no like '' || #{cate_no} || '%'
+	</delete>
+	
+	<delete id="adminCateDeleteFLife">
+		delete from furniture_life
+	</delete>
+	<!-- 여기까지 가구류 삭제 -->
+
+	<!-- 게시물 삭제에 필요한 카테고리 별 게시물 리스트 가져오기 -->
+	<select id="productCateList" resultType="ProductVo">
+		select p_no  , p_name , cate_no , p_price , p_content , p_seller , p_thumbimg , p_regdate , p_no2, p_readcount from (
+																								select a.*
+																								from clothes_product a
+																							
+																								union all 
+																							
+																								select b.c_com_no  , b.c_com_name , b.c_com_cate_no , b.c_com_price , b.c_com_content , b.c_com_seller , b.c_com_pic , b.c_com_regdate , b.p_no, b.p_readcount
+																								from computer_product b 
+																							
+																								union all 
+																							
+																								select c1.* 
+																								from furniture_bed c1
+																							
+																								union all
+																								
+																								select c2.* 
+																								from furniture_interior c2
+																								
+																								union all
+																								
+																								select c3.*
+																								from furniture_kitchen c3
+																								
+																								union all
+																								
+																								select c4.*
+																								from furniture_life c4
+																								
+																								union all
+																								
+																								select d.*
+																								from whitegoods d
+	)
+	where cate_no like '' || #{cate_no} || '%'
+	order by p_no2 desc
+	</select>
+	
+	<!-- 판매자권한 삭제에 필요한 판매자 리스트 가져오기 -->
+	<select id="sellerList" resultType="MemberVo">
+		select * from member
+		where m_selling = 1
+		and ADMIN_CHECK != 1
+	</select>
+	
+	<!-- 카테고리 추가에서 사용할 대분류 가져오기 -->
+	<select id="firstCategoryList" resultType="CategoryVo">
+		select * from category
+		where cate_ref is null
+	</select>
+	
+	<!-- 카테고리 추가에서 사용할 하위 분류 가져오기 -->
+	<select id="otherCategoryList" resultType="CategoryVo">
+		select * from category
+		where cate_ref = #{cate_ref}
+	</select>
+	
+	<!-- 이미지 S3에서 삭제하기위한 이미지 이름 가져오기 -->
+	<select id="imgNameSearch" resultType="string">
+		select p_thumbimg from (
+								select a.*
+								from clothes_product a
+
+								union all 
+																							
+								select b.c_com_no  , b.c_com_name , b.c_com_cate_no , b.c_com_price , b.c_com_content , b.c_com_seller , b.c_com_pic , b.c_com_regdate , b.p_no, b.p_readcount
+								from computer_product b 
+								
+								union all 
+								
+								select c1.* 
+								from furniture_bed c1
+								
+								union all
+								
+								select c2.* 
+								from furniture_interior c2
+								
+								union all
+								
+								select c3.*
+								from furniture_kitchen c3
+								
+								union all
+								
+								select c4.*
+								from furniture_life c4
+								
+								union all
+								
+								select d.*
+								from whitegoods d
+		)
+	where p_no2 = #{p_no2}
+	</select>
+	
+	<!-- 상품게시물에 대한 이미지 삭제 -->
+	<delete id="productImgDelete">
+		delete from product_images
+		where p_no = #{p_no}
+	</delete>
+	
+	<!-- 상품게시물에 대해 삭제할 이미지 이름 가져오기 -->
+	<select id="productImgList" resultType="String">
+		select img_name from product_images
+		where p_no = #{p_no}
+	</select>
+	
+	<!-- 회원삭제에 필요한 회원 목록 -->
+	<select id="adminMemberSearch" resultType="MemberVo">
+		select * from member
+		where ADMIN_CHECK != 1
+	</select>
+	
+	<!-- 회원 삭제 -->
+	<delete id="adminMemberDelete">
+		delete from member
+		where m_id = #{m_id}
+	</delete>
+	
+	<!-- 회원 판매자권한 박탈 경력 삭제 -->
+	<delete id="adminDeleteSanctions">
+		delete from sanctions
+		where m_id = #{m_id}
+	</delete>
+	
+	<!-- 카트에 상품 담은 회원 삭제 -->
+	<delete id="adminDeleteCart">
+		delete from cart
+		where m_id = #{m_id}
+	</delete>
+	
+	<!-- 회원 삭제 시 의류 상품등록 한 데이터 삭제 -->
+	<delete id="adminMemberClothesDelete">
+		delete from clothes_product
+		where p_seller = #{p_seller}
+	</delete>
+	
+	<!-- 회원 삭제 시 컴퓨터 상품등록 한 데이터 삭제 -->
+	<delete id="adminMemberComputerDelete">
+		delete from computer_product
+		where c_com_seller = #{c_com_seller}
+	</delete>
+	
+	<!-- 회원 삭제 시 가전제품 상품등록 한 데이터 삭제 -->
+	<delete id="adminMemberWhitegoodsDelete">
+		delete from whitegoods
+		where w_seller = #{w_seller}
+	</delete>
+	
+	<!-- 여기부터 회원 삭제 시 가구 상품등록 한 데이터 삭제 -->
+	<delete id="adminMemberFBedDelete">
+		delete from furniture_bed
+		where bed_seller = #{bed_seller}
+	</delete>
+	
+	<delete id="adminMemberFInteriorDelete">
+		delete from furniture_interior
+		where interior_seller = #{interior_seller}
+	</delete>
+	
+	<delete id="adminMemberFKitchenDelete">
+		delete from furniture_Kitchen
+		where kitchen_seller = #{kitchen_seller}
+	</delete>
+	
+	<delete id="adminMemberFLifeDelete">
+		delete from furniture_life
+		where life_seller = #{life_seller}
+	</delete>
+	<!-- 여기까지 회원 삭제 시 가구 상품등록 한 데이터 삭제 -->
+	
+	<!-- 회원 삭제시 product 테이블에 있는 데이터 삭제 -->
+	<delete id="adminMemberProductDelete">
+		delete from product
+		where p_seller = #{p_seller}
+	</delete>
+	
+	<!-- 회원 삭제 시 1:1 문의 삭제 -->
+	<delete id="adminMemberInquiryDelete">
+		delete from inquiry
+		where m_id=#{m_id}
+	</delete>
+	<!-- Q&A 추가에 필요한 카테고리 리스트(대분류) 가져오기 -->
+	<select id="firstQACategory" resultType="QACateVo">
+		select * from qa_cate
+		where qa_cate_ref is null
+	</select>
+	<!-- Q&A 추가에 필요한 하위 카테고리 리스트 가져오기 -->
+	<select id="otherQACategory" resultType="QACateVo">
+		select * from qa_cate
+		where qa_cate_ref = #{qa_cate_ref}
+	</select>
+	
+	<!-- Q&A 추가하기 -->
+	<insert id="qaInsert">
+		insert into q_and_a(qa_no, qa_cate_no, q_content, a_content)
+		values(seq_qa_no.nextval, #{qa_cate_no}, #{q_content}, #{a_content})
+	</insert>
+	
+	<!-- Q&A 수정/삭제에 필요한 Q&A 리스트 가져오기 -->
+	<select id="QA_UDList" resultType="QandAVo">
+		select * from q_and_a
+		order by qa_cate_no asc
+	</select>
+	
+	<!-- Q&A 수정하기에 사용할 데이터 -->
+	<select id="qandaDetail" resultType="QandAVo">
+		select * from q_and_a
+		where qa_no = #{qa_no}
+	</select>
+	
+	<!-- Q&A 수정/삭제에 필요한 Q&A 카테고리 리스트 가져오기(이름 필요해서 대조해서 쓸 예정) -->
+	<select id="QACategory" resultType="QACateVo">
+		select * from qa_cate
+		order by qa_cate_no desc
+	</select> 
+	
+	<!-- Q&A 수정 -->
+	<update id="QAUpdate">
+		update q_and_a set
+			qa_cate_no = #{qa_cate_no},
+			q_content = #{q_content},
+			a_content = #{a_content}
+		where qa_no = #{qa_no}
+	</update>
+	
+	<!-- Q&A 삭제 -->
+	<delete id="QADelete">
+		delete from q_and_a
+		where qa_no = #{qa_no}
+	</delete>
+	
+	<!-- 1:1문의 리스트 가져오기 -->
+	<select id="inquiryList" resultType="InquiryVo">
+		select * from inquiry
+	</select>
+	
+	<!-- 1:1 답변용 데이터 가져오기 -->
+	<select id="detailInquiry" resultType="InquiryVo">
+		select * from inquiry
+		where inquiry_no = #{inquiry_no}
+	</select>
+	
+	<!-- 답변 완료시 삭제 -->
+	<delete id="inquiryDelete">
+		delete from inquiry
+		where inquiry_no = #{inquiry_no}
+	</delete>
+	
+	<!-- 공지사항 작성 -->
+	<insert id="insertNotice">
+		insert into notice(notice_no, notice_title, notice_content)
+		values(seq_notice_no.nextval, #{notice_title}, #{notice_content})
+	</insert>
+	
+	<!-- Q&A 카테고리 추가 -->
+	<insert id="qaCategoryInsert">
+	insert into qa_cate(qa_cate_no, qa_cate_name, qa_cate_ref)
+	values(#{qa_cate_no}, #{qa_cate_name}, #{qa_cate_ref})
+	</insert>
+	
+	<!-- Q&A 카테고리 삭제 -->
+	<delete id="qaCategoryDelete">
+	delete from qa_cate
+	where qa_cate_no = #{qa_cate_no}
+	</delete>
+	
+	<!-- Q&A 카테고리 삭제 시 해당 카테고리 사용하는 Q&A 삭제 -->
+	<delete id="qaCategoryQADelete">
+		delete from q_and_a
+		where qa_cate_no = #{qa_cate_no}
+	</delete>
+	
+	<!-- 공지사항 삭제 -->
+	<delete id="adminNoticeDelete">
+		delete from notice
+		where notice_no = #{notice_no}
+	</delete>
+</mapper>

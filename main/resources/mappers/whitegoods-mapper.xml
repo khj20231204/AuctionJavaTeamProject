@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.kh.team.whitegoods">
+	<!-- 가전제품 전체 가져오기 -->
+	<select id="getWhitegoodsList" resultType="WhitegoodsVo">
+		select * from whitegoods
+		where cate_no like ''|| #{cate_no} ||'%'
+		order by w_no desc
+	</select>
+	
+	<!-- 상품 수정 -->
+	<update id="updateWhitegoods">
+		update whitegoods set
+			w_name = #{w_name},
+			w_price = #{w_price},
+			cate_no = #{cate_no},
+			w_content = #{w_content},
+			w_thumbimg = #{w_thumbimg}
+		where w_no = #{w_no}
+		and w_seller = #{w_seller}
+	</update>
+	
+	<!-- 상품 삭제 -->
+	<delete id="deleteWhitegoods">
+		delete from whitegoods
+		where w_no = #{w_no}
+	</delete>
+	
+	<!-- 상품 중분류 선택해 들어가면 하위카테고리 띄우게 하기 -->
+	<select id="getFirstCategoryList" resultType="CategoryVo">
+		select * from category
+		where cate_ref = #{cate_ref}
+	</select>
+	
+	<!-- 조회수 -->
+	<update id="readUpdate">
+		update whitegoods set
+			p_readcount = p_readcount + 1
+		where w_no = #{w_no}
+	</update>
+	
+	<!-- 상품 상세보기 -->
+	<select id="detailWhitegoods" resultType="WhitegoodsVo">
+		select * from whitegoods
+		where w_no = #{w_no}
+	</select>
+	
+	<!-- 해당 인원이 올린 가전제품 전체 삭제 -->
+	<delete id="userPAlldelete">
+		delete from whitegoods
+		where w_seller = #{w_seller}
+	</delete>
+	
+	<!-- 상세보기때 사용할 이미지의 이름 불러오기 -->
+	<select id="productImgList" resultType="String">
+		select img_name from product_images
+		where p_no = #{p_no}
+		order by img_no desc
+	</select>
+	
+	<!-- 상품 등록시 저장한 이미지 이름 지우기 -->
+	<delete id="productImgDelete">
+		delete from product_images
+		where p_no = #{p_no}
+	</delete>
+	
+	<!-- 상품설명 이미지 등록 -->
+	<insert id="productImage">
+		insert into product_images(img_no, img_name, p_no)
+		values(product_img_no.nextval, #{img_name}, #{p_no})
+	</insert>
+	
+	<!-- 리뷰 읽기 -->
+	<select id="reviewList" resultType="WhitegoodsReviewVo">
+		select * from whitegoods_review
+		where w_no = #{w_no}
+	</select>
+	
+	<!-- 판매자정보 가져오기 -->
+	<select id="sellingMember" resultType="MemberVo">
+		select * from member
+		where m_id = #{m_id}
+	</select>
+	
+	<select id="getProductQna" resultType="WhitegoodsQnaVo">
+		select * from whitegoods_qna
+		where w_no = #{w_no}
+	</select>
+</mapper>

@@ -1,0 +1,98 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+.buycomputersFormDiv{			/*  컴퓨터 구매폼 배경*/
+	display:inline-block;
+	width:100%;	
+}
+.buyheader{				/*  컴퓨터 구매폼 (상단) 배경*/
+	display:inline-block;
+	height:100px;
+	width:70%;		
+	float:left;
+}
+.buynav{			/*  컴퓨터 구매폼 (좌측 중앙) 배경*/
+	display:inline-block;
+	height:450px;
+	width:35%;
+	float:left;
+}
+.buyaside{			/*  컴퓨터 구매폼 (우측 중앙) 배경*/
+	display:inline-block;
+	height:450px;
+	width:35%;	
+	float:left;		
+}
+.buyleftnav{		/*  컴퓨터 구매폼 (좌측 중앙) 배경*/
+	display:inline-block;
+	height:450px;
+	width:15%;
+	float:left;
+}
+.buyleftupnav{			/*  컴퓨터 구매폼 (좌측 상단) 배경*/
+	display:inline-block;
+	height:100px;
+	width:15%;
+	float:left;
+}
+
+.buyrightaside{			/*  컴퓨터 구매폼 (우측 중앙) 배경*/
+	display:inline-block;
+	height:450px;
+	width:15%;	
+	float:left;		
+}
+.buyrightupaside{			/*  컴퓨터 구매폼 (우측 상단) 배경*/
+	display:inline-block;
+	height:100px;
+	width:15%;	
+	float:left;		
+}
+.buyleftdownnav{	`		/*  컴퓨터 구매폼 (좌측 하단) 배경*/
+	display:inline-block;
+	height:100px;
+	width:15%;
+	float:left;
+}
+.buyrightdownaside{			/*  컴퓨터 구매폼 (우측 하단) 배경*/
+	display:inline-block;
+	height:100px;
+	width:15%;	
+	float:left;		
+}
+.buyfooter{			/*  컴퓨터 구매폼 (하단) 배경*/
+	display:inline-block;
+	width:70%;
+	height:100px;
+	float:left;	
+}
+.buycomputersFormDivBeneath{			/*  컴퓨터 구매폼 (하단 아래) 배경*/
+	display:inline-block;
+	width:100%;	
+}
+.buyleftbeneathdownnav{			/*  컴퓨터 구매폼 (하단 아래 왼쪽) 배경*/
+	display:inline-block;
+	width:15%;
+	height:300px;
+	float:left;
+}
+.buyrightbeneathdownaside{			/*  컴퓨터 구매폼 (하단 아래 오른쪽) 배경*/
+	display:inline-block;
+	width:15%;
+	height:300px;	
+	float:left;		
+}
+.buybeneathfooter{			/*  컴퓨터 구매폼 (하단 아래 끝) 배경*/
+	display:inline-block;
+	width:70%;
+	height:300px;
+	float:left;
+	overflow:scroll;
+}
+.inputModifyModal{			/*  컴퓨터 구매폼 모달*/
+	width:300px;
+}
+</style>

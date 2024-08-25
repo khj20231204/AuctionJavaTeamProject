@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.kh.team.computers">
+	<select id="getComptersProductList" resultType="ComputerVo">
+		select * from computer_product 
+		where c_com_cate_no like #{c_com_cate_no} || '%'
+		order by p_no asc
+	</select>
+	
+	<select id="getSearchById" resultType="int">
+		select count(c_com_seller) from computer_product 
+		where c_com_seller = #{c_com_seller}		
+	</select>
+	
+	<select id="buyComputerComment" resultType="int">
+		select count(*) from c_com_comment_table 
+		where c_com_product = #{c_com_product}
+		order by c_com_comment_no asc		
+	</select>
+	
+	<select id="buyComputerExplain" resultType="int">
+		select count(*) from product_explain_table 
+		where p_e_product = #{c_com_product}
+		order by p_e_no asc		
+	</select>
+	
+	<select id="buyComputerProduct" resultType="ComputerVo">
+		select * from computer_product 
+		where p_no = #{p_no}		
+	</select>
+	
+	<select id="buyCategoryInfoGet" resultType="CategoryVo">
+		select cate_ref, cate_name from category 
+		where cate_no = #{c_com_cate_no}		
+	</select>
+	
+	<select id="getComptersProductListSearch" resultType="ComputerVo">
+		select * from computer_product 
+		where c_com_name like '%' || #{c_com_name} || '%'
+				and
+				(c_com_cate_no like #{cate_no0} || '%'
+				or c_com_cate_no like #{cate_no1} || '%'
+				or c_com_cate_no like #{cate_no2} || '%'
+				or c_com_cate_no like #{cate_no3} || '%'
+				or c_com_cate_no like #{cate_no4} || '%'
+				or c_com_cate_no like #{cate_no5} || '%')
+				order by p_no asc				 
+	</select>
+	
+	<select id="getComptersProductListPrice" resultType="ComputerVo">
+		select * from computer_product 
+		where c_com_price between to_number(#{firstPrice}) and to_number(#{lastPrice}) 
+				and
+				(c_com_cate_no like #{cate_no0} || '%'
+				or c_com_cate_no like #{cate_no1} || '%'
+				or c_com_cate_no like #{cate_no2} || '%'
+				or c_com_cate_no like #{cate_no3} || '%'
+				or c_com_cate_no like #{cate_no4} || '%'
+				or c_com_cate_no like #{cate_no5} || '%')
+				order by p_no asc				 
+	</select>
+	
+	<select id="getComptersProductListById" resultType="ComputerVo">
+		select * from computer_product 
+		where c_com_seller = #{c_com_seller} 
+				and
+				(c_com_cate_no like #{cate_no0} || '%'
+				or c_com_cate_no like #{cate_no1} || '%'
+				or c_com_cate_no like #{cate_no2} || '%'
+				or c_com_cate_no like #{cate_no3} || '%'
+				or c_com_cate_no like #{cate_no4} || '%'
+				or c_com_cate_no like #{cate_no5} || '%')
+				order by p_no asc				 
+	</select>
+	
+	<select id="getComptersProductListArray" resultType="ComputerVo">
+		select * from computer_product where 
+						c_com_cate_no like 
+					#{cate_no0} || '%'
+						or c_com_cate_no like 
+					#{cate_no1} || '%'
+						or c_com_cate_no like 
+					#{cate_no2} || '%'
+						or c_com_cate_no like 
+					#{cate_no3} || '%'
+						or c_com_cate_no like 
+					#{cate_no4} || '%'
+						or c_com_cate_no like 
+					#{cate_no5} || '%'
+						order by p_no asc		
+	</select>
+	
+	<select id="getCategoryInfo" resultType="CategoryVo">
+		select * from category
+		where cate_ref = #{cate_ref}
+	</select>
+	
+	<select id="getCategoryInfoArray" resultType="CategoryVo">
+		select * from category where cate_ref = 
+						#{cate_no0}
+						or cate_ref =
+						#{cate_no1}
+						or cate_ref =
+						#{cate_no2} 												
+						or cate_ref =
+						#{cate_no3} 												
+						or cate_ref =
+						#{cate_no4} 												
+						or cate_ref =
+						#{cate_no5} 																	
+	</select>
+	
+	<select id="detailComputerInfo" resultType="ComputerVo">
+		select * from computer_product
+		where p_no = #{p_no}
+	</select>	
+	
+</mapper>

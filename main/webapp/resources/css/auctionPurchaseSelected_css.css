@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<style>
+
+table{
+	font-family:verdana, 굴림, sans-serif; 
+
+}
+
+.mainTitle{
+	font-size:50px;
+	font-weight:bold;		
+}
+
+td{
+	font-size:15px;
+}
+
+hr {
+    border: 5;
+    height: 3px;
+    background: #ccc;
+  }
+  
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+.DetailDiv{
+	display:inline-block;
+	width:100%;	
+}
+
+.DetailNav{
+	display:inline-block;	
+	width:100%;		
+	float:left;
+}
+
+.DetailSection{
+	display:inline-block;	
+	width:100%;		
+	float:left;
+}
+
+</style>

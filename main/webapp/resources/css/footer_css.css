@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+
+.bottomFooter{		/*  풋터 폼 배경*/
+	background : silver;
+	position: relative;
+	bottom: auto;
+	
+	position: fixed;
+	bottom:0;
+	left:0;
+	width:100%;	
+		
+}
+.footerFont{        /* 풋터 폼의 글씨 설정 */ 
+	
+
+.footerFont{        /* 풋터 폼의 글씨 설정 */	
+	color:white;
+	font-size : 16px;
+}
+
+</style>

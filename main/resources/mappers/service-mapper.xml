@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.kh.team.service">
+	<select id="allQAList" resultType="QandAVo">
+		select * from q_and_a
+	</select>
+	<select id="categoryQAList" resultType="QandAVo">
+		select * from q_and_a
+		where qa_cate_no like ''||#{qa_cate_no}||'%'
+		order by qa_no desc
+	</select>
+	
+	<select id="qaCategoryList" resultType="QACateVo">
+		select * from qa_cate
+	</select>
+	
+	<select id="firstQACategory" resultType="QACateVo">
+		select * from qa_cate
+		where qa_cate_ref is null
+	</select>
+	
+	<select id="noticeList" resultType="NoticeVo">
+		select * from notice
+		order by notice_no desc
+	</select>
+	
+	<select id="noticeDetail" resultType="NoticeVo">
+		select * from notice
+		where notice_no = #{notice_no}
+	</select>
+	
+	<insert id="inquiryQ">
+		insert into inquiry(inquiry_no, m_id, email, inquiry_title, inquiry_content)
+		values(seq_inquiry_no.nextval, #{m_id}, #{email}, #{inquiry_title}, #{inquiry_content})
+	</insert>
+ </mapper>

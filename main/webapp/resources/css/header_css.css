@@ -1,0 +1,659 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<style>
+
+
+.header_body {
+	background-color : white;
+	padding-bottom: 60px;
+	border-bottom: 1px solid black;
+}
+
+body {
+	background-color: white;
+}
+
+/* -------------------------------------------- ------메인 메뉴 css --------------------------------------- */
+
+#mainNav {
+  width: 150%;
+  display: flex;
+  position: relative;
+  padding-top: 1%;
+}	
+
+#allCategory {
+    position: relative;
+	font-size : 40px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    top: -18px;
+    left: 60%;
+}
+
+ul, li { 
+  margin: 0; 
+  padding: 0; 
+  list-style: none;
+} 
+
+#main-menu > li{
+  float: left;
+  position: relative;
+  z-index:2;
+  
+}
+
+#main-menu > li > a {
+  font-size: 0.85rem;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  padding: 14px 36px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+ 
+}
+
+.sub-menu {
+  background-color: rgba(250,250,250, 0.8);
+  display: none;
+  transition: all 0.15s ease-in;
+  position: absolute;
+  z-index: 2;
+  top: 35px;
+  white-space: nowrap;
+}
+
+.sub-menu > li {
+  text-align: center;
+  padding: 16px 36px;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+#main-menu > li:nth-child(4) > ul >  li {
+	padding: 16px 25px;
+}
+	
+#main-menu > li:nth-child(5) > ul {
+	left: -28%
+}
+
+.sub-menu > li >  a {
+  color: black;
+  text-decoration: none;
+  font-size: 13px;	
+  
+}
+
+.sub-menu > li > a:hover {
+ text-decoration: none;
+ font-weight : bold;
+}
+
+/* --------------------------------------------------메인 메뉴 css END--------------------------------------- */
+
+
+#btnSearch{        /* 검색어창 돋보기 버튼 */ 
+	width: 30px;
+    height: 50%;
+    border: 0px;
+    position: relative;
+    top: -85%;
+    float: right;
+    color: black;
+    background-color: #e6e4e4;
+}
+
+.container-1{  			/* 검색어창 div 전체 */
+	width: 150px;
+    height: 26px;
+    left: 100%;
+    top: 2px;
+    background: #e6e4e4;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.txtSearch {          /* 검색어창 input박스 */
+	font-size:16px; 
+	outline:none; 
+	width:150px; 
+	border:0px;
+	background-color: #ffffff;
+    background-color: rgba( 255, 255, 255, 0);
+}
+
+.topHeader {         /* 화면 맨 위 배경 */
+	background : #f7f7f7;
+}
+
+.topHeader-button {        /* 화면 맨 위 버튼들 */ 
+	float:right;
+	color:black;
+	font-size : 12px;
+}
+
+.topHeader-button:hover {        /* 화면 맨 위 버튼들 */ 
+	color:black;
+	text-decoration: none;
+}
+
+.btnHome {             /* 메인 사이트  홈 버튼 */
+	font-size:50px; 
+	color:black;
+	text-decoration:none !important;
+	position: absolute;
+    left: 40%;
+    top: 25%;
+    z-index:2;
+    
+}
+
+.btnHome:hover {
+	color:black;
+}
+	
+.divHome {			/* div 메인 사이트 홈 버튼 */ 
+	padding-left:200px;
+	
+}
+
+.allCategory{
+	font-size:43px;
+	position: absolute;
+    top: -10px;
+    left: 150px;
+}
+
+.borderAllCategory {
+	padding-left : 340px;
+    height: 50;
+}
+	
+#lblAllCategory {
+	font-size:40px;
+}
+
+.allCategory_ul {
+	display:none;
+	border: 1px solid black;
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	position:absolute;
+	left:30px;
+	top:25px;
+	background: white;
+	color : black;
+	width: 140px;          /* 전체 카테고리 하나 당 길이 */
+	height: 156px;       /* 전체 카테고리 높이 */
+	text-align:center;
+	z-index:2;            /* 메인 카테고리와 겹침 (2번이 맨위) */ 
+	font-size :  20px;
+}
+
+.allCategory_ul li {
+	border-bottom: 1px solid black;
+}
+
+.allCategory_ul li:hover {
+	background-color:white;
+}
+
+.allCategory_ul li a:hover {
+	color:black;
+	font-weight: bold;
+}
+
+.default {
+	height : 70px;
+	padding-top : 9px;
+}
+
+.listMenu li {
+	width:243px;          /* 상품 리스트 헤더 하나 당 길이 * /  
+	
+}
+
+.listMain {					/* 상품 리스트 전체 길이 */
+ 	background-color : white;
+	text-align:center;
+	border: 1px solid lightgray;
+	color: black;
+	font-size : 22px;
+}
+
+.listMenu {
+	padding-left : 155px;
+	padding-bottom : 5px;	
+	
+}
+
+.nav-tabs {
+	border-bottom : 0px;
+}
+
+.productList {
+	padding : 0px;
+}
+
+.list {
+	width: 972px;
+	background : white;
+	border-bottom: 1px solid gray;
+}
+
+.productName {
+	color : black;
+	font-size : 22px;
+}
+	
+.seller {
+	position: relative;
+    padding-top: 100px;
+    left: 200px;
+    font-size : 22px;
+}
+
+#price {
+	font-weight: bold;
+    font-size: 30px;
+    padding-left: 11px;
+}
+
+.page_ul {
+	font-size: 22px;
+	color : black;
+}
+
+.page_num {
+	color : black;
+	margin-left : 7.5px;
+	margin-right : 7.5px;
+	height : 40px;
+	width : 42px;
+}
+
+.page_num:hover {
+	border: 1px solid black;
+	color: black;
+}
+
+.page_move {
+	border : none;
+	font-size : 18px;
+	color: black;
+}
+
+.page_move:hover {
+	background-color : white;
+	color : black;
+	text-decoration: underline;
+}
+
+.btnMore {
+	padding-left : 29.4%
+}
+
+.divMore {
+	width: 972px;
+	text-align : center;
+	color: black;
+}
+
+.divMore:hover {
+	border : 1px solid black;
+}
+
+.a_More {
+	color : black;
+	text-decoration: none;
+	font-size : 20px;
+}
+
+.a_More:hover {
+	color : black;
+	text-decoration: none;
+}
+
+.arrow img {
+	padding-left: 10px;
+    width: 55px;
+    margin-bottom: 7px;
+    height: 19px;
+}
+/* --------------------------------------------------------------------- */
+
+.lblHOT {
+  position: absolute;
+  left: 15%;
+  top: 100px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.neon {
+  font-family: neon;
+  color: red;
+  font-size: 1vw;
+  
+}
+
+.flux {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 1vw;
+ 
+}
+
+.neon {
+  animation: neon 2s ease infinite;
+  -moz-animation: neon 2s ease infinite;
+  -webkit-animation: neon 2s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw red, .5vw .5vw .1vw #806914;
+    color: red;
+  }
+  50% {
+   
+  }
+}
+
+.flux {
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}
+
+.divPlace {
+	position: relative;
+    float: right;
+    padding-right: 7%;
+    padding-top: 3%;
+    font-size: 18px;
+}
+
+.divPlace a img {
+	height : 30px;
+}
+
+/* 주변 매물 찾기 모달 창 css  */
+
+#fileDrop {
+	width: 60%;
+	height: 100px;
+	background-color: white;
+	border: 4px dashed #c8d7ff;
+}
+
+
+.modal.modal-center {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+  .modal.modal-center:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog.modal-fullsize {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-dialog.modal-center {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle; 
+}
+
+.modal-dialog.modal-80size {
+  width: 80%;
+  height: 80%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content.modal-fullsize {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+  
+}
+
+.modal-content {
+    width: 68%;
+    left: 15%;
+}
+
+.modal-content.modal-80size {
+  height: auto;
+  min-height: 80%;
+}
+
+.modal-body {
+  	left: 12%;
+}
+
+#moadlTxtAddrSearch {
+	font-size: 25px;
+    position: relative;
+    left: 10%;
+}
+
+#modalAddrFind {
+	position: relative;
+    left: 12%;
+}
+
+#searchAddr {
+	position: relative;
+    padding-bottom: 15px;
+}
+
+#sample4_detailAddress {
+	width: 60%;
+}
+
+#roadAndextraAddr {
+	position: relative;
+    padding-bottom: 2%;
+}
+
+#sample4_roadAddress , #sample4_extraAddress {
+	width: 40%;
+}
+
+#divPlace{
+	width: 130px;
+}
+
+#divSearch_text {
+	position: absolute;
+    top: 3%;
+    right: 70%;
+}
+
+#divSearch_Form{  
+	display:none;			
+	width: 200px;
+    height: 26px;
+    background: #e6e4e4;
+    border-radius: 10px;
+}
+
+.scroll_txtsearch {          
+	font-size:16px; 
+	outline:none; 
+	width:200px; 
+	border:0px;
+	background-color: #ffffff;
+    background-color: rgba( 255, 255, 255, 0);
+}
+
+#banner { 
+	position: absolute;
+    font-size: 12pt;
+    top: 5px;
+    left: 0;
+    width: 250px;
+    z-index: 10;
+    background: #f1f1f1;
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+    text-align: center;
+}
+ 
+#banner > span {
+	margin-bottom: 10px; 
+	display: block;
+}
+.banner_contents {
+	position : absolute;
+	min-height: 200px; 
+	background-color: #c0c0c0; 
+	padding: 5px;
+}
+
+
+.borderAllCategory_scroll {
+	position: fixed;	
+	top : 0;
+	height: 50;	
+	z-index : 15;	
+	background : white;	
+	border-bottom : 1px solid black;
+	padding-left: 200px;
+}
+
+.divBanner {
+	position: relative;
+    width: 200px;
+    top: 50px;
+    right: -100px;
+}
+
+.divBanner_scroll {
+	position : fixed;
+	left : 6%;
+	top : 100px;
+	width: 200px;
+}
+
+#content_img {
+	padding-left : 35%;
+	height: 450px;
+    position: relative;
+    float: left;
+}
+
+#content_p_name {
+	font-size : 30px;
+	
+}
+
+#divContent {
+    border-top: 2px solid black;
+    border-bottom: 1px solid gainsboro;
+	text-align: center;
+}
+
+#btnBuy {
+	position: relative;
+    left: -2%;
+    width: 60%;
+    height: 65%;
+    top: 15px;
+}
+
+#btnBuy2 {
+	position: relative;
+    bottom: 0;
+    left: 0%;
+    width: 30%;
+    height: 65%;
+    top: 15px;
+    border: 1px solid gainsboro;
+    color: black;
+}
+
+.content_span2 {
+	font-weight: bold;
+    font-size: 20px;
+}
+
+.content_span4 {
+    font-size: 13px;
+}
+
+
+#span_detail {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#content_detail_info {
+	border-bottom : 1px solid gainsboro;
+	text-align: center;
+	height : 75px;
+}
+
+#content_detail_img {
+}
+
+.carousel-caption {
+	background-color: rgb(255,255, 255, 0.8);
+	color: black;
+}
+
+#txtStrike {
+	font-size: 15px;
+	color : black;
+}
+
+#carousel-detail {
+	font-size: 25px;
+    color: red;
+}
+
+#carousel-discount{
+	font-size: 35px;
+	color : red;
+	padding-right : 1%;
+}
+
+#btnCoordinate {
+	position: relative;
+    top: -10%;
+    left: -30%;
+}
+
+</style>

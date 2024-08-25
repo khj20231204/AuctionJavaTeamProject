@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.kh.team.member">
+	<select id="login" resultType="MemberVo">
+		select *
+		from member
+		where m_id = #{m_id}
+		and m_pass = #{m_pass}
+	</select>
+	
+	<select id="sendEmailForFindId" resultType="String">
+		select m_id
+		from member
+		where email = #{to}		
+	</select>
+	<select id="memberVoInfoSearch" resultType="MemberVo">
+		select *
+		from member
+		where m_id = #{m_id}		
+	</select>
+	<select id="sendEmailForFindPw" resultType="String">
+		select m_pass
+		from member
+		where m_id = #{m_id}	
+		and email = #{to}	
+	</select>
+	<update id="changePw">
+		update member set
+			m_pass = #{m_pass_new}
+		where m_id = #{m_id}				
+	</update>
+	<update id="memberVoInfoChange">
+		update member set
+			m_pass = #{m_pass},
+			email = #{email},
+			m_phonenumber = #{m_phonenumber}
+		where m_id = #{m_id}				
+	</update>	
+	<update id="changeNameByCallProduct">
+		update member set
+			m_pass = #{m_pass},			
+			m_name = #{buyerName}
+		where m_id = #{m_id}				
+	</update>
+	
+	
+	
+	<select id="getByMemberPoint" resultType="int">
+		select m_point
+		from member
+		where m_id = #{m_id}			
+	</select>	
+	<update id="increaseMemberPoint">
+		update member set
+			m_point = #{point} + #{pointAdd}
+		where m_id = #{m_id}				
+	</update>
+	
+</mapper>
