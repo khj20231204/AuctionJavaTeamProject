@@ -13,6 +13,9 @@
 ![Oralcle](https://img.shields.io/badge/oracle-%2300f.svg?style=for-the-badge&logo=oracle&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-green.svg?style=for-the-badge&logo=spring&logoColor=white)
 
+1. # 테이블 설계
+   <img src="aution_db.png" width="500px">
+
 1. # 주요 기능
    
 
