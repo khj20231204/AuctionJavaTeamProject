@@ -1,1 +1,4 @@
-# AuctionJavaTeamProject
+
+
+
+# 옥션 경매 사이트를 롤 모델로 구성한 프로젝트입니다.💡
