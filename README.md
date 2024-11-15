@@ -8,7 +8,7 @@
  ![HTML5](https://img.shields.io/badge/html5-red.svg?style=for-the-badge&logo=html5&logoColor=white)
   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)  
- ![JAVA](https://img.shields.io/badge/JAVA-%231572B6.svg?style=for-the-badge&logo=JAVA&logoColor=blue)  
+ ![JAVA](https://img.shields.io/badge/java-%231572B6.svg?style=for-the-badge&logo=JAVA&logoColor=blue)  
  
 
 
