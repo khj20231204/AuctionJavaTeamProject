@@ -1,5 +1,5 @@
 
-<img src="./aution_main.png" width="100px" align="center"/>
+<img src="./aution_logo.png" width="100px" align="center"/>
 
 # 옥션 경매 사이트를 롤 모델로 구성한 프로젝트입니다.💡
 
