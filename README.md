@@ -18,11 +18,11 @@
 
 1. # 주요 기능
 
-<img src="background_fade.gif" width="700px">
-<img src="image_up.gif" width="700px">
-   <img src="item_time_count.gif" width="700px">
-   <img src="payment.gif" width="700px">
-   <img src="time_add.gif" width="700px">
+<img src="background_fade.gif" width="200px">
+<img src="image_up.gif" width="300px">
+   <img src="item_time_count.gif" width="400px">
+   <img src="payment.gif" width="500px">
+   <img src="time_add.gif" width="150px">
    
 
  
