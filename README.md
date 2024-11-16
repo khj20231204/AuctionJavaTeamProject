@@ -19,7 +19,7 @@
 
 1. # 주요 기능🔍
    1. 메인화면 : 각 상품 별로 마감 시간이 카운트됩니다.   
-   <img src="item_time_count.gif" style="width='400px';border:'1px'">
+   <img src="item_time_count.gif" style="width=300px;border:1px solid #eaeaea;">
    
    1. 이미지 추가 : 상품 등록시 이미지를 드래그 해서 추가합니다.   
    <img src="image_up.gif" width="400px">    
