@@ -15,7 +15,7 @@
    ![Spring](https://img.shields.io/badge/spring-green.svg?style=for-the-badge&logo=spring&logoColor=white)
 
 1. # 테이블 설계📲
-   <img src="aution_db.png" width="700px">
+   <img src="aution_db.png" width="100%">
 
 1. # 주요 기능🔍
    1) 메인화면 : 각 상품 별로 마감 시간이 카운트됩니다.   
