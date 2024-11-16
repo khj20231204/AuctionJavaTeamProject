@@ -49,7 +49,7 @@
    
 1. # 프로그램 설계
    <br>
-   <img src="program_draft.gif" style="border:3px solid black;border-radius:9px;width:600px">    
+   <img src="program_draft.png" style="border:3px solid black;border-radius:9px;width:600px">    
    
  
 
