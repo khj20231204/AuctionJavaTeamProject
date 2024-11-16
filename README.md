@@ -18,36 +18,39 @@
    <img src="aution_db.png" width="700px">
 
 1. # 주요 기능🔍
-   1. 메인화면 : 각 상품 별로 마감 시간이 카운트됩니다.   
+   1) 메인화면 : 각 상품 별로 마감 시간이 카운트됩니다.   
    
    <img src="item_time_count.gif" style="border:3px solid black;border-radius:9px;width:350px">    
 
    <br>
    <br>
       
-   1. 이미지 추가 : 상품 등록시 이미지를 드래그 해서 추가합니다.   
+   2) 이미지 추가 : 상품 등록시 이미지를 드래그 해서 추가합니다.   
    <img src="image_up.gif" style="border:3px solid black;border-radius:9px;width:350px">    
    
    <br>
    <br>
       
-   1. 남은 시간 추가 : 사용자가 입찰을 할 경우   
+   3) 남은 시간 추가 : 사용자가 입찰을 할 경우   
       
    <img src="time_add.gif" style="border:3px solid black;border-radius:9px;width:350px">   
    
    <br>
    <br>
       
-   1. 입찰 종료 : 시간이 만료되면 진행 창이 나타나면서 현재화면은 비활성화 됩니다.   
+   4) 입찰 종료 : 시간이 만료되면 진행 창이 나타나면서 현재화면은 비활성화 됩니다.   
    <img src="background_fade.gif" style="border:3px solid black;border-radius:9px;width:350px">   
 
    <br>
    <br>
    
-   1. 결제 api를 이용하여 제 통장에서 돈이 빠져나가고 다음날 다시 들오게 됩니다.   
+   5) 결제 api를 이용하여 제 통장에서 돈이 빠져나가고 다음날 다시 들오게 됩니다.   
    <img src="payment.gif" style="border:3px solid black;border-radius:9px;width:350px">   
    
-
+1. # 프로그램 설계
+   <br>
+   <img src="program_draft.gif" style="border:3px solid black;border-radius:9px;width:600px">    
+   
  
 
 
