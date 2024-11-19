@@ -33,10 +33,15 @@
    </div>
    <br>
    <br>
-   <hr>
-   3) 이미지 추가 : 상품 등록시 이미지를 드래그 해서 추가합니다.   
+   <hr>   
+   <br>
+   __2) 이미지 추가 : 상품 등록시 이미지를 드래그 해서 추가합니다.__   
+   <br>
    <img src="image_up.gif" style="border:3px solid black;border-radius:9px;width:350px">    
-   
+   <br>
+   ```javascript
+      let
+   ```
    <br>
    <br>
       
