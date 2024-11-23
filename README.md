@@ -39,7 +39,9 @@
    <br>
    <img src="image_up.gif" style="border:3px solid black;border-radius:9px;width:350px">    
    <br>
-     
+   파일을 드래그 드롭을 하게 되면 e.originalEvent.dataTransfer.files[0] 코드를 통해 추가된 파일 정보를 가져와 비동기 방식으로 서버에 파일을 전송합니다.
+   서버에서 이미지 파일이 맞으면 로컬의 하드디스크에 저장을 합니다. 클라이언트 쪽에서 받은 데이터가 success이면 img태그에 방금 로컬에 저장된 이미지 파일을
+   출력시켜줍니다. 
    <br>
    <br>
       
@@ -61,7 +63,7 @@
    
 1. # 프로그램 설계
    <br>
-   <img src="program_draft.png" style="border:3px solid black;border-radius:9px;width:100%">    
+   
    
  
 
