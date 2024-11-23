@@ -18,7 +18,7 @@
    <img src="aution_db.png" width="100%">
 
 1. # 주요 기능🔍
-   __1) 메인화면 : 각 상품 별로 마감 시간이 카운트됩니다.__   
+   __1) 메인화면 : 각 상품 별로 마감 시간 카운트__   
    <br>
    <img src="item_time_count.gif" style="border:3px solid black;border-radius:9px;width:350px">    
    <br>
@@ -35,31 +35,31 @@
    <br>
    <br>
    
-   __2) 이미지 추가 : 상품 등록시 이미지를 드래그 해서 추가합니다.__   
+   __2) 이미지 추가 : 상품 등록시 이미지를 드래그해서 추가__   
    <br>
    <img src="image_up.gif" style="border:3px solid black;border-radius:9px;width:350px">    
    <br>
    파일을 드래그 드롭을 하게 되면 e.originalEvent.dataTransfer.files[0] 코드를 통해 추가된 파일 정보를 가져와 비동기 방식으로 서버에 파일을 전송합니다.
-   서버에서 이미지 파일이 맞으면 로컬의 하드디스크에 저장을 합니다. 클라이언트 쪽에서 받은 데이터가 success이면 img태그에 방금 로컬에 저장된 이미지 파일을
-   출력시켜줍니다. 
+   서버에서 이미지 파일이 맞으면 로컬의 하드디스크에 저장합니다. 클라이언트 쪽에서 받은 데이터가 success이면 img태그에 방금 로컬에 저장된 이미지 파일을
+   출력합니다. 이미지 파일 이름 중복을 막기 위해 UUID 클래스를 사용합니다.   
    <br>
    <br>
       
-   3) 남은 시간 추가 : 사용자가 입찰을 할 경우   
-      
+   __3) 남은 시간 추가 : 사용자가 입찰 할 경우__   
+   <br>
    <img src="time_add.gif" style="border:3px solid black;border-radius:9px;width:350px">   
-   
    <br>
-   <br>
-      
-   4) 입찰 종료 : 시간이 만료되면 진행 창이 나타나면서 현재화면은 비활성화 됩니다.   
-   <img src="background_fade.gif" style="border:3px solid black;border-radius:9px;width:350px">   
-
+   현재 남은 시간을 가져와 00:00:00의 시간 형태에서 : 를 기준으로 3개의 배열로 split 후 가운데 값에 2을 더합니다.
    <br>
    <br>
    
-   5) 결제 api를 이용하여 제 통장에서 돈이 빠져나가고 다음날 다시 들오게 됩니다.   
-   <img src="payment.gif" style="border:3px solid black;border-radius:9px;width:350px">   
+   __4) 결제 시스템 구현__
+   <br>   
+   <img src="payment.gif" style="border:3px solid black;border-radius:9px;width:350px">
+   <br>
+   결제 시스템은 아이엠포트 api를 이용했습니다.
+   <br>
+   <br>
    
 1. # 프로그램 설계
    <br>
