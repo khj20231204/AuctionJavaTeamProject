@@ -30,6 +30,7 @@
    <img src="item_time_count.gif" style="border:3px solid black;border-radius:9px;width:350px">    
    <br>
    <table style="border:2px solid black">
+      <tr><td>
    현재 시간과 마감 시간의 차이를 계산한 후 setTimeout으로 초를 1씩 뺍니다.<br>
    초가 0이 되면 분에서 값을 가져옵니다.<br>
    분이 0이면 시간에서 값을 가져옵니다.<br>
@@ -37,6 +38,7 @@
    단, 달의 경우 윤달이 있기 때문에 경매의 마감날짜 차이를 1달을 넘기지 않습니다.<br>
    2월 28일날 등록을 했고 3월 4일이 마감일이면 월에 해당하는 일 수를 가져올 때 마감일의 전달 일 수를 가져오면 됩니다.<br> 
    이 함수가 new Date(nowYear, nowMonth - 1, 0).getDate()입니다.<br>
+         </td></tr>
    </table>
    
    <br>
