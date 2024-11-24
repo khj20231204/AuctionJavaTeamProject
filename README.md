@@ -73,7 +73,8 @@
 1. # 기술 스택
    <br>
    <img src="https://github.com/khj20231204/AuctionJavaTeamProject/blob/main/developer_tools2.png?raw=true" style="border:3px solid black;width:800px">
-   [![](https://skillicons.dev/icons?i=html,css,js,jquery,jsp&theme=dard)](https://skillicons.dev)<br>
+   <br>
+   ![](https://skillicons.dev/icons?i=html,css,js,jquery,jsp&theme=dard)(https://skillicons.dev)<br>
    [![](https://skillicons.dev/icons?i=java,mybatis&theme=dard)](https://skillicons.dev)<br>
    [![](https://skillicons.dev/icons?i=java,mybatis&theme=dard)](https://skillicons.dev)<br>
    [![](https://skillicons.dev/icons?i=oracle&theme=dard)](https://skillicons.dev)<br>
