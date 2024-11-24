@@ -71,10 +71,10 @@
 
 1. # 기술 스택
    <br>
-   <img src="https://github.com/khj20231204/AuctionJavaTeamProject/blob/main/developer_tools.png?raw=true" style="border:3px solid black;width:300px">
+   <img src="https://github.com/khj20231204/AuctionJavaTeamProject/blob/main/developer_tools2.png?raw=true" style="border:3px solid black;width:300px">
 
 1. # DataFlow
-2. 
+ 
  
 
 
