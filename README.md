@@ -78,12 +78,7 @@
    [![](https://skillicons.dev/icons?i=java,html,css&theme=dark)](https://skillicons.dev)<br>
    (https://skillicons.dev)
    
-   [![](https://skillicons.dev/icons?i=java,mybatis&theme=dark)](https://skillicons.dev)<br>
-   [![](https://skillicons.dev/icons?i=java,mybatis&theme=dard)](https://skillicons.dev)<br>
-   [![](https://skillicons.dev/icons?i=oracle&theme=dard)](https://skillicons.dev)<br>
-   [![](https://skillicons.dev/icons?i=javaspring,bootstrap&theme=dard)](https://skillicons.dev)<br>
-   [![](https://skillicons.dev/icons?i=aws&theme=dard)](https://skillicons.dev)<br>
-   [![](https://skillicons.dev/icons?i=git,eclipse&theme=dard)](https://skillicons.dev)<br>
+
     
     클라이언트 html css js jquery jsp
     서버 java mybatis
