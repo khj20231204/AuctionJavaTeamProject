@@ -18,7 +18,7 @@
    ![Spring](https://img.shields.io/badge/spring-green.svg?style=for-the-badge&logo=spring&logoColor=white)
 
 1. # 데모 영상
-   
+   https://www.youtube.com/@HJk-wj7uh
 
 1. # 테이블 설계📲
    <img src="aution_db.png" width="100%">
@@ -67,21 +67,16 @@
    <br>
    <br>
 
-1. # 프로그램 설계
-   <br>
-
 1. # 기술 스택
    <br>
    <img src="https://github.com/khj20231204/AuctionJavaTeamProject/blob/main/developer_tools2.png?raw=true" style="border:3px solid black;width:800px">
    <br>
 
-   [![](https://skillicons.dev/icons?i=java,mybatis,js,html,css,jquery,jsp&theme=dark)](https://skillicons.dev)
+   [![](https://skillicons.dev/icons?i=java,js,html,css,jquery&theme=dark)](https://skillicons.dev)
    [![](https://skillicons.dev/icons?i=java,mybatis,js,html,css,jquery,jsp&theme=dark)](https://skillicons.dev)
    [![](https://skillicons.dev/icons?i=java,mybatis,js,html,css,jquery,jsp&theme=dark)](https://skillicons.dev)<br>
    [![](https://skillicons.dev/icons?i=oracle&theme=dark)](https://skillicons.dev)<br>
    [![](https://skillicons.dev/icons?i=aws,git&theme=dark)](https://skillicons.dev)<br>
-    
-1. # DataFlow
  
  
 
