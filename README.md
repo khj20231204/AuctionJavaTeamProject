@@ -6,6 +6,7 @@
    : 예전부터 옥션 중고 장터의 시간이 카운트 되는 기능과 옥션의 경매 방식에 흥미를 가지고 있었고 꼭 한번은 만들고 싶다는 생각을 하고 있었습니다. 그러던 중 팀 프로젝트 주제로 중고 사이트가 선정되었고, 경매 부분만 따로 제가 맡게 되었습니다. 백엔드, 프론트엔드, 테이블 설계까지 개인 프로젝트의 개념으로 진행하게 되었습니다.
 
 프로젝트 기간 : 1개월   
+개발 인원 : 1명   
    
    ![HTML5](https://img.shields.io/badge/html5-red.svg?style=for-the-badge&logo=html5&logoColor=white)
    ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
