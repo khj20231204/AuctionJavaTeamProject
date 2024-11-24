@@ -71,8 +71,7 @@
 
 1. # 기술 스택
    <br>
-   eclipse git github java html js jquery windows bootstrap aws
-   [![](https://skillicons.dev/icons?i=aws,gcp,azure,react,vue,flutter&perline=2)](https://skillicons.dev) 
+   <img src="https://github.com/khj20231204/AuctionJavaTeamProject/blob/main/developer_tools.png?raw=true" style="border:3px solid black;width:300px">
 
 1. # DataFlow
 2. 
