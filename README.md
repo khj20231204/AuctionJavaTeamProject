@@ -76,6 +76,7 @@
    <br>
 
       [![](https://skillicons.dev/icons?i=java,mybatis&theme=dark)](https://skillicons.dev)<br>
+      [![](https://skillicons.dev/icons?i=js,html&theme=dark)](https://skillicons.dev)<br>
   
     
     클라이언트 html css js jquery jsp
