@@ -70,6 +70,9 @@
    <br>
 
 1. # 기술 스택
+   <br>
+   eclipse git github java html js jquery windows bootstrap aws
+   [![](https://skillicons.dev/icons?i=aws,gcp,azure,react,vue,flutter&perline=2)](https://skillicons.dev) 
 
 1. # DataFlow
 2. 
