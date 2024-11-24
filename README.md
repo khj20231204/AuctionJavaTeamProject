@@ -1,5 +1,5 @@
 
-<p align="center"><span style="font-size:20px">중고 경매 사이트</span></p>
+<p align="center"><span style="font-size: 12px; color: green">중고 경매 사이트</span></p>
 
 1. # 개요💡
    __옥션 중고 장터를 롤 모델로 구성한 프로젝트입니다.__  
