@@ -28,9 +28,7 @@
    __1) 메인화면 : 각 상품 별로 마감 시간 카운트__   
    <br>
    <img src="item_time_count.gif" style="border:3px solid black;border-radius:9px;width:350px">    
-   <br>
-   <table style="border:2px solid black">
-      <tr><td>
+   <table style="border:2px solid black"><tr><td>
    현재 시간과 마감 시간의 차이를 계산한 후 setTimeout으로 초를 1씩 뺍니다.<br>
    초가 0이 되면 분에서 값을 가져옵니다.<br>
    분이 0이면 시간에서 값을 가져옵니다.<br>
@@ -38,20 +36,21 @@
    단, 달의 경우 윤달이 있기 때문에 경매의 마감날짜 차이를 1달을 넘기지 않습니다.<br>
    2월 28일날 등록을 했고 3월 4일이 마감일이면 월에 해당하는 일 수를 가져올 때 마감일의 전달 일 수를 가져오면 됩니다.<br> 
    이 함수가 new Date(nowYear, nowMonth - 1, 0).getDate()입니다.<br>
-         </td></tr>
-   </table>
+   </td></tr></table>
    
    <br>
    
    __2) 이미지 추가 : 상품 등록시 이미지를 드래그해서 추가__   
    <br>
    <img src="image_up.gif" style="border:3px solid black;border-radius:9px;width:350px">    
-   <br>
+   <table style="border:2px solid black"><tr><td>
    파일을 드래그 드롭을 하게 되면 e.originalEvent.dataTransfer.files[0] 코드를 통해 추가된 파일 정보를 가져와 비동기 방식으로 서버에 파일을 전송합니다.
    서버에서 이미지 파일이 맞으면 로컬의 하드디스크에 저장합니다. 클라이언트 쪽에서 받은 데이터가 success이면 img태그에 방금 로컬에 저장된 이미지 파일을
    출력합니다. 이미지 파일 이름 중복을 막기 위해 UUID 클래스를 사용합니다.   
+   </td></tr></table>
+
    <br>
-      
+   
    __3) 남은 시간 추가 : 사용자가 입찰 할 경우__   
    <br>
    <img src="time_add.gif" style="border:3px solid black;border-radius:9px;width:350px">   
