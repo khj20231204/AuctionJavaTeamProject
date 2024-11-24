@@ -54,17 +54,17 @@
    __3) 남은 시간 추가 : 사용자가 입찰 할 경우__   
    <br>
    <img src="time_add.gif" style="border:3px solid black;border-radius:9px;width:350px">   
-   <br>
+   <table style="border:2px solid black"><tr><td>
    현재 남은 시간을 가져와 00:00:00의 시간 형태에서 : 를 기준으로 3개의 배열로 split 후 가운데 값에 2을 더합니다.
-   <br>
+   </td></tr></table>
    <br>
    
    __4) 결제 시스템 구현__
    <br>   
    <img src="payment.gif" style="border:3px solid black;border-radius:9px;width:350px">
-   <br>
+   <table style="border:2px solid black"><tr><td>
    결제 시스템은 아이엠포트 api를 이용했습니다.
-   <br>
+   </td></tr></table>
    <br>
 
 1. # 기술 스택  [![](https://skillicons.dev/icons?i=java,js,html,css,jquery,git,github,aws&theme=dark)](https://skillicons.dev)
