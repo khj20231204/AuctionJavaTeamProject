@@ -73,7 +73,20 @@
 1. # 기술 스택
    <br>
    <img src="https://github.com/khj20231204/AuctionJavaTeamProject/blob/main/developer_tools2.png?raw=true" style="border:3px solid black;width:800px">
-
+   [![](https://skillicons.dev/icons?i=html,css,js,jquery,jsp&theme=dard)](https://skillicons.dev)<br>
+   [![](https://skillicons.dev/icons?i=java,mybatis&theme=dard)](https://skillicons.dev)<br>
+   [![](https://skillicons.dev/icons?i=java,mybatis&theme=dard)](https://skillicons.dev)<br>
+   [![](https://skillicons.dev/icons?i=oracle&theme=dard)](https://skillicons.dev)<br>
+   [![](https://skillicons.dev/icons?i=javaspring,bootstrap&theme=dard)](https://skillicons.dev)<br>
+   [![](https://skillicons.dev/icons?i=aws&theme=dard)](https://skillicons.dev)<br>
+   [![](https://skillicons.dev/icons?i=git,eclipse&theme=dard)](https://skillicons.dev)<br>
+    
+    클라이언트 html css js jquery jsp
+    서버 java mybatis
+    oracle
+    프레임워크 java spring, bootstrap
+    cloud AWS
+    tools  Eclipse, git
 1. # DataFlow
  
  
