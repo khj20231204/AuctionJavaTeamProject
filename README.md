@@ -75,16 +75,12 @@
    <img src="https://github.com/khj20231204/AuctionJavaTeamProject/blob/main/developer_tools2.png?raw=true" style="border:3px solid black;width:800px">
    <br>
 
+   [![](https://skillicons.dev/icons?i=java,mybatis,js,html,css,jquery,jsp&theme=dark)](https://skillicons.dev)
+   [![](https://skillicons.dev/icons?i=java,mybatis,js,html,css,jquery,jsp&theme=dark)](https://skillicons.dev)
    [![](https://skillicons.dev/icons?i=java,mybatis,js,html,css,jquery,jsp&theme=dark)](https://skillicons.dev)<br>
    [![](https://skillicons.dev/icons?i=oracle&theme=dark)](https://skillicons.dev)<br>
-   [![](https://skillicons.dev/icons?i=AWS,git&theme=dark)](https://skillicons.dev)<br>
+   [![](https://skillicons.dev/icons?i=aws,git&theme=dark)](https://skillicons.dev)<br>
     
-    클라이언트 html css js jquery jsp
-    서버 java mybatis
-    oracle
-    프레임워크 java spring, bootstrap
-    cloud AWS
-    tools  Eclipse, git
 1. # DataFlow
  
  
