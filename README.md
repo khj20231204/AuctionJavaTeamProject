@@ -20,9 +20,6 @@
    ![Oralcle](https://img.shields.io/badge/oracle-%2300f.svg?style=for-the-badge&logo=oracle&logoColor=white)
    ![Spring](https://img.shields.io/badge/spring-green.svg?style=for-the-badge&logo=spring&logoColor=white)
 
-1. # 데모 영상📽️
-   https://www.youtube.com/@HJk-wj7uh
-
 1. # 테이블 설계📲
    <img src="aution_db.png" width="100%">
 
