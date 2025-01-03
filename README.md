@@ -24,59 +24,59 @@
    1. ## 메인 화면   
       <table style="border:2px solid black">
       <tr>
-      <td><img src="total_main.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
-      <td><img src="total_main2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+      <td><img src="readme_img/total_main.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+      <td><img src="readme_img/total_main2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
       </tr>
       </table>   
 
    1. ## 회원가입   
       <table style="border:2px solid black">
       <tr>
-      <td><img src="total_join.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
-      <td><img src="total_join2.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
-      <td><img src="total_join3.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
-      <td><img src="total_join4.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+      <td><img src="readme_img/total_join.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+      <td><img src="readme_img/total_join2.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+      <td><img src="readme_img/total_join3.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+      <td><img src="readme_img/total_join4.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
       </tr>
       </table>   
 
    1. ## 판매 상품의 입찰과 낙찰   
       <table style="border:2px solid black">
       <tr>
-      <td><img src="total_sale_bid1.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
-      <td><img src="total_sale_bid2.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
-      <td><img src="total_sale_bid3.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+      <td><img src="readme_img/total_sale_bid1.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+      <td><img src="readme_img/total_sale_bid2.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+      <td><img src="readme_img/total_sale_bid3.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
       </tr>
       </table>   
 
    1. ## 구매 상품의 입찰과 낙찰   
       <table style="border:2px solid black">
       <tr>
-      <td><img src="total_purchase_bid1.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
-      <td><img src="total_purchase_bid2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+      <td><img src="readme_img/total_purchase_bid1.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+      <td><img src="readme_img/total_purchase_bid2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
       </tr>
       </table>   
 
    1. ## 관심 상품   
       <table style="border:2px solid black">
       <tr>
-      <td><img src="total_intertest1.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
-      <td><img src="total_intertest2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+      <td><img src="readme_img/total_intertest1.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+      <td><img src="readme_img/total_intertest2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
       </tr>
       </table>   
 
    1. ## 결제한 상품   
       <table style="border:2px solid black">
        <tr>
-         <td><img src="total_payment1.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
-         <td><img src="total_payment2.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
-         <td><img src="total_payment3.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+         <td><img src="readme_img/total_payment1.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+         <td><img src="readme_img/total_payment2.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+         <td><img src="readme_img/total_payment3.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
        </tr>
        </table>   
 
    1. ## 배송한 상품   
       <table style="border:2px solid black">
        <tr>
-         <td><img src="total_delivery.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+         <td><img src="readme_img/total_delivery.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
        </tr>
        </table>   
 
@@ -84,51 +84,51 @@
       __등록__   
       <table style="border:2px solid black">
        <tr>
-         <td><img src="total_crud_c1.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
-         <td><img src="total_crud_c2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+         <td><img src="readme_img/total_crud_c1.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+         <td><img src="readme_img/total_crud_c2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
        </tr>
        <tr>
-         <td><img src="total_crud_c3.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
-         <td><img src="total_crud_c4.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+         <td><img src="readme_img/total_crud_c3.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+         <td><img src="readme_img/total_crud_c4.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
        </tr>
        </table>    
 
       __수정__   
       <table>
       <tr>
-         <td><img src="total_crud_u.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+         <td><img src="readme_img/total_crud_u.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
       </tr>
       </table>    
 
       __삭제__   
       <table>
       <tr>
-         <td><img src="total_crud_d.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+         <td><img src="readme_img/total_crud_d.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
       </tr>
       </table>   
 
 1. # 테이블 설계📲
-   <img src="aution_db.png" width="100%">
+   <img src="readme_img/aution_db.png" width="100%">
 
 1. # Flow Chart📥
    <table style="border:2px solid black">
       <tr>
-         <td colspan=3><img src="flow_main.png" style="border:3px solid black;border-radius:9px;width:450px"></td>
+         <td colspan=3><img src="readme_img/flow_main.png" style="border:3px solid black;border-radius:9px;width:450px"></td>
       </tr>
       <tr>
-         <td><img src="flow_register.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
-         <td><img src="flow_bid.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
-         <td><img src="flow_interesting.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+         <td><img src="readme_img/flow_register.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+         <td><img src="readme_img/flow_bid.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+         <td><img src="readme_img/flow_interesting.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
       </tr>
       <tr>
-         <td colspan=3><img src="flow_payment.png" style="border:3px solid black;border-radius:9px;width:450px"></td>
+         <td colspan=3><img src="readme_img/flow_payment.png" style="border:3px solid black;border-radius:9px;width:450px"></td>
       </tr>
    </table>
 
 1. # 주요 기능🔍
    __1) 메인화면 : 각 상품 별로 마감 시간 카운트__   
    <br>
-   <img src="item_time_count.gif" style="border:3px solid black;border-radius:9px;width:350px">    
+   <img src="readme_img/item_time_count.gif" style="border:3px solid black;border-radius:9px;width:350px">    
    <table style="border:2px solid black"><tr><td>
    현재 시간과 마감 시간의 차이를 계산한 후 setTimeout으로 초를 1씩 뺍니다.<br>
    초가 0이 되면 분에서 값을 가져옵니다.<br>
@@ -143,7 +143,7 @@
    
    __2) 이미지 추가 : 상품 등록시 이미지를 드래그해서 추가__   
    <br>
-   <img src="image_up.gif" style="border:3px solid black;border-radius:9px;width:350px">    
+   <img src="readme_img/image_up.gif" style="border:3px solid black;border-radius:9px;width:350px">    
    <table style="border:2px solid black"><tr><td>
    파일을 드래그 드롭을 하게 되면 e.originalEvent.dataTransfer.files[0] 코드를 통해 추가된 파일 정보를 가져와 비동기 방식으로 서버에 파일을 전송합니다.
    서버에서 이미지 파일이 맞으면 로컬의 하드디스크에 저장합니다. 클라이언트 쪽에서 받은 데이터가 success이면 img태그에 방금 로컬에 저장된 이미지 파일을
@@ -154,7 +154,7 @@
    
    __3) 남은 시간 추가 : 사용자가 입찰 할 경우__   
    <br>
-   <img src="time_add.gif" style="border:3px solid black;border-radius:9px;width:350px">   
+   <img src="readme_img/time_add.gif" style="border:3px solid black;border-radius:9px;width:350px">   
    <table style="border:2px solid black"><tr><td>
    현재 남은 시간을 가져와 00:00:00의 시간 형태에서 : 를 기준으로 3개의 배열로 split 후 가운데 값에 2을 더합니다.
    </td></tr></table>
@@ -162,7 +162,7 @@
    
    __4) 결제 시스템 구현__
    <br>   
-   <img src="payment.gif" style="border:3px solid black;border-radius:9px;width:350px">
+   <img src="readme_img/payment.gif" style="border:3px solid black;border-radius:9px;width:350px">
    <table style="border:2px solid black"><tr><td>
    결제 시스템은 아이엠포트 api를 이용했습니다.
    </td></tr></table>
