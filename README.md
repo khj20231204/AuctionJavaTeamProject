@@ -29,9 +29,9 @@
          <td colspan=3><img src="flow_main.png" style="border:3px solid black;border-radius:9px;width:450px"></td>
       </tr>
       <tr>
-         <td colspan=3><img src="flow_register.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
-         <td colspan=3><img src="flow_bid.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
-         <td colspan=3><img src="flow_interesting.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+         <td><img src="flow_register.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+         <td><img src="flow_bid.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+         <td><img src="flow_interesting.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
       </tr>
       <tr>
          <td colspan=3><img src="flow_payment.png" style="border:3px solid black;border-radius:9px;width:450px"></td>
