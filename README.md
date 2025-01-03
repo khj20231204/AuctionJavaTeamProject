@@ -40,13 +40,38 @@
        </table>   
 
    1. ## 판매 상품의 입찰과 낙찰
-      
+       <table style="border:2px solid black">
+       <tr>
+         <td><img src="total_sale_bid1.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+         <td><img src="total_sale_bid2.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+         <td><img src="total_sale_bid3.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+       </tr>
+       </table>   
 
    1. ## 구매 상품의 입찰과 낙찰
+    <table style="border:2px solid black">
+       <tr>
+         <td><img src="total_purchase_bid1.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+         <td><img src="total_purchase_bid2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+       </tr>
+       </table>   
 
    1. ## 관심 상품
+      <table style="border:2px solid black">
+       <tr>
+         <td><img src="total_intertest1.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+         <td><img src="total_intertest2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+       </tr>
+       </table>   
 
    1. ## 결제한 상품
+      <table style="border:2px solid black">
+       <tr>
+         <td><img src="total_payment1.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+         <td><img src="total_payment2.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+         <td><img src="total_payment3.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+       </tr>
+       </table>   
 
    1. ## 배송한 상품
 
