@@ -26,15 +26,15 @@
 1. # Flow Chart - 12
    <table style="border:2px solid black">
       <tr>
-         <td colspan=3>1</td>
+         <td colspan=3><img src="flow_main.png" style="border:3px solid black;border-radius:9px;width:450px"></td>
       </tr>
       <tr>
-         <td>1</td>
-         <td>2</td>
-         <td>3</td>
+         <td colspan=3><img src="flow_register.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+         <td colspan=3><img src="flow_bid.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+         <td colspan=3><img src="flow_interesting.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
       </tr>
       <tr>
-         <td colspan=3>1</td>
+         <td colspan=3><img src="flow_payment.png" style="border:3px solid black;border-radius:9px;width:450px"></td>
       </tr>
    </table>
 
