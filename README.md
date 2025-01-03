@@ -23,7 +23,7 @@
 1. # 테이블 설계📲
    <img src="aution_db.png" width="100%">
 
-1. # Flow Chart
+1. # Flow Chart - 12
    <table style="border:2px solid black">
       <tr>
          <td colspan=3>1</td>
