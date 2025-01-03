@@ -26,7 +26,7 @@
 1. # Flow Chart
    <table style="border:2px solid black">
       <tr>
-         <td rowspan=3>1</td>
+         <td colspan=3>1</td>
       </tr>
       <tr>
          <td>1</td>
@@ -34,7 +34,7 @@
          <td>3</td>
       </tr>
       <tr>
-         <td rowspan=3>1</td>
+         <td colspan=3>1</td>
       </tr>
    </table>
 
