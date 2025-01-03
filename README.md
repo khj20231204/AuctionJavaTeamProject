@@ -21,50 +21,50 @@
    ![Spring](https://img.shields.io/badge/spring-green.svg?style=for-the-badge&logo=spring&logoColor=white)
 
 1. # 전체 기능
-   1. ## 메인 화면
-       <table style="border:2px solid black">
-       <tr>
-         <td><img src="total_main.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
-         <td><img src="total_main2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
-       </tr>
-       </table>   
-
-   1. ## 회원가입
-       <table style="border:2px solid black">
-       <tr>
-         <td><img src="total_join.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
-         <td><img src="total_join2.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
-         <td><img src="total_join3.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
-         <td><img src="total_join4.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
-       </tr>
-       </table>   
-
-   1. ## 판매 상품의 입찰과 낙찰
-       <table style="border:2px solid black">
-       <tr>
-         <td><img src="total_sale_bid1.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
-         <td><img src="total_sale_bid2.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
-         <td><img src="total_sale_bid3.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
-       </tr>
-       </table>   
-
-   1. ## 구매 상품의 입찰과 낙찰
-    <table style="border:2px solid black">
-       <tr>
-         <td><img src="total_purchase_bid1.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
-         <td><img src="total_purchase_bid2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
-       </tr>
-       </table>   
-
-   1. ## 관심 상품
+   1. ## 메인 화면   
       <table style="border:2px solid black">
-       <tr>
-         <td><img src="total_intertest1.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
-         <td><img src="total_intertest2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
-       </tr>
-       </table>   
+      <tr>
+      <td><img src="total_main.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+      <td><img src="total_main2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+      </tr>
+      </table>   
 
-   1. ## 결제한 상품
+   1. ## 회원가입   
+      <table style="border:2px solid black">
+      <tr>
+      <td><img src="total_join.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+      <td><img src="total_join2.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+      <td><img src="total_join3.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+      <td><img src="total_join4.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+      </tr>
+      </table>   
+
+   1. ## 판매 상품의 입찰과 낙찰   
+      <table style="border:2px solid black">
+      <tr>
+      <td><img src="total_sale_bid1.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+      <td><img src="total_sale_bid2.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+      <td><img src="total_sale_bid3.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
+      </tr>
+      </table>   
+
+   1. ## 구매 상품의 입찰과 낙찰   
+      <table style="border:2px solid black">
+      <tr>
+      <td><img src="total_purchase_bid1.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+      <td><img src="total_purchase_bid2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+      </tr>
+      </table>   
+
+   1. ## 관심 상품   
+      <table style="border:2px solid black">
+      <tr>
+      <td><img src="total_intertest1.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+      <td><img src="total_intertest2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+      </tr>
+      </table>   
+
+   1. ## 결제한 상품   
       <table style="border:2px solid black">
        <tr>
          <td><img src="total_payment1.png" style="border:3px solid black;border-radius:9px;width:200px"></td>
@@ -73,14 +73,14 @@
        </tr>
        </table>   
 
-   1. ## 배송한 상품
+   1. ## 배송한 상품   
       <table style="border:2px solid black">
        <tr>
          <td><img src="total_delivery.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
        </tr>
        </table>   
 
-   1. ## 기본적인 상품 CRUD
+   1. ## 기본적인 상품 CRUD   
       __등록__   
       <table style="border:2px solid black">
        <tr>
@@ -100,15 +100,12 @@
       </tr>
       </table>    
 
-      __삭제__
+      __삭제__   
       <table>
       <tr>
          <td><img src="total_crud_d.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
       </tr>
       </table>   
-
-
-
 
 1. # 테이블 설계📲
    <img src="aution_db.png" width="100%">
