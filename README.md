@@ -170,11 +170,11 @@
 
 1. # 기술 스택  [![](https://skillicons.dev/icons?i=java,js,html,css,jquery,git,github,aws&theme=dark)](https://skillicons.dev)
    <br>
-   <img src="https://github.com/khj20231204/AuctionJavaTeamProject/blob/main/developer_tools2.png?raw=true" style="border:3px solid black;width:800px">
+   <img src="readme_img/staks.png" style="border:3px solid black;width:800px">
    <br>
 
-  
-   
+1. # 남기고 싶은 말..
+   한 달 동안 후회없는 프로젝트를 만들기 위해 많은 노력과 시간을 투자했지만 만족스럽지 못한 결과가 나온 거 같아 아쉬움이 많이 남습니다. DB를 구성하면서 숫한 시행착오도 겪고 디자인을 구현하면서 힘도 들었지만 프로그래밍 부분에선 제가 만들고 싶은 건 무엇이든 만들 수 있다는 강한 자신감을 얻게 되었습니다. 프로젝트 진행과정에서 경매부분이 따로 빠져나와 결과적으론 개인 프로젝트란 느낌이 크지만 진행 과정에선 팀원들과의 많은 의견 조율과 서로간 격려를 통해 마음만은 즐거웠고 팀원 사이에 배려도 배울 수 있는 시간이 였습니다. 하지만 PPT구성과 시연방식의 연관성, 그리고 완성도 면에서 조금만 더 시간이 있었더라면..이란 아쉬움이 많이 남는 프로젝트였습니다.   
  
 
 
