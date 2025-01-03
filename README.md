@@ -20,10 +20,43 @@
    ![Oralcle](https://img.shields.io/badge/oracle-%2300f.svg?style=for-the-badge&logo=oracle&logoColor=white)
    ![Spring](https://img.shields.io/badge/spring-green.svg?style=for-the-badge&logo=spring&logoColor=white)
 
+1. # 전체 기능
+   1. ## 메인 화면
+       <table style="border:2px solid black">
+       <tr>
+         <td><img src="total_main.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+         <td><img src="total_main2.png" style="border:3px solid black;border-radius:9px;width:300px"></td>
+       </tr>
+       </table>   
+
+   1. ## 회원가입
+       <table style="border:2px solid black">
+       <tr>
+         <td><img src="total_join.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+         <td><img src="total_join2.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+         <td><img src="total_join3.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+         <td><img src="total_join4.png" style="border:3px solid black;border-radius:9px;width:150px"></td>
+       </tr>
+       </table>   
+
+   1. ## 판매 상품의 입찰과 낙찰
+      
+
+   1. ## 구매 상품의 입찰과 낙찰
+
+   1. ## 관심 상품
+
+   1. ## 결제한 상품
+
+   1. ## 배송한 상품
+
+   1. ## 기본적인 상품 CRUD
+
+
 1. # 테이블 설계📲
    <img src="aution_db.png" width="100%">
 
-1. # Flow Chart - 12
+1. # Flow Chart📥
    <table style="border:2px solid black">
       <tr>
          <td colspan=3><img src="flow_main.png" style="border:3px solid black;border-radius:9px;width:450px"></td>
