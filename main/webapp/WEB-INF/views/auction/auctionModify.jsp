@@ -82,8 +82,10 @@ $(function(){
 	
 		var file = e.originalEvent.dataTransfer.files[0]; //드래그한 파일에 대한 객체 정보를 가지고 있다
 		//html의 form객체를 만들어서 여기에 이미지를 추가해서 통째로 ajax로 넘긴다
+		//e인 이벤트 값중 원본 이벤트값에 접근
+		//dataTransfer : dragdrop이나 drop 이벤트를 한 파일에 접근
 
-		var formData = new FormData();
+		var formData = new FormData(); //키-쌍으로 이루어지면 서버에 데이터를 전송하기 위한 객체
 		formData.append("file", file);
 		var p_no = $("#p_no").val();
 		//alert("p_no:"+p_no);
